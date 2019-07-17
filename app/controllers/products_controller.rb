@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
     # @products = Product.order("name").page(params[:page]).per_page(5)
     # @products = Product.order("categories.name").joins(:category).select("products.*, categories.name as category_name")
-    @products = Product.order("name").includes(:category)
+    @products = Product.order("name")
     end
 
   # GET /products/1
